@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Extended Specimen Network — Sherwin Carlquist ESN</title>
+<style>
+  :root {
+    --bg: #f5f3ee;
+    --card: #ffffff;
+    --ink: #2b2a26;
+    --muted: #6f6b62;
+    --accent: #4a6c4d;
+    --accent-2: #b8763e;
+    --accent-3: #6a5a8c;
+    --border: #e3dfd5;
+    --bg-alt: #faf8f3;
+
+    /* Diagram palette — warm-leaning version of the source */
+    --d-tertiary-fill:  #e6efd6;
+    --d-tertiary-ring:  #8a9a73;
+    --d-secondary-fill: #f6e5b0;
+    --d-secondary-ring: #b09a52;
+    --d-primary-fill:   #f1b075;
+    --d-primary-ring:   #b8763e;
+    --d-physical-fill:  #f6cba2;
+
+    --d-bubble-tertiary:  #4f8a3f;
+    --d-bubble-secondary: #d9a93a;
+    --d-bubble-primary:   #b94a35;
+    --d-bubble-physical:  #d98a55;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* ── Header ── */
+  header {
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    padding: 28px 40px 22px;
+  }
+  .header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  header h1 {
+    margin: 0 0 6px;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  header .subtitle {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  /* ── Nav strip ── */
+  .nav-strip {
+    background: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
+    padding: 0 40px;
+  }
+  .nav-strip-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 0;
+  }
+  .nav-strip a {
+    display: block;
+    padding: 12px 18px 11px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .nav-strip a:first-child { padding-left: 0; }
+  .nav-strip a:hover { color: var(--ink); border-bottom-color: var(--border); }
+  .nav-strip a.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+  /* ── Layout ── */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 40px 80px;
+  }
+
+  /* ── Intro ── */
+  .intro {
+    max-width: 760px;
+    margin: 0 auto 28px;
+    text-align: center;
+  }
+  .intro h2 {
+    margin: 0 0 12px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .intro p {
+    margin: 0 0 10px;
+    color: var(--ink);
+  }
+  .intro p:last-child { margin-bottom: 0; }
+  .intro a { color: var(--accent); text-decoration: none; }
+  .intro a:hover { text-decoration: underline; }
+
+  /* ── Diagram ── */
+  .diagram-wrap {
+    position: relative;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px 24px 12px;
+    margin: 0 auto 28px;
+    max-width: 860px;
+  }
+  .diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Bubble styling */
+  .esn-bubble { cursor: default; transition: opacity 0.15s, filter 0.15s; }
+  .esn-bubble .b-circle { transition: filter 0.15s, stroke-width 0.15s; }
+  .esn-bubble .b-label { pointer-events: none; }
+  .esn-bubble .b-link-icon { pointer-events: none; opacity: 0; transition: opacity 0.15s; }
+  .esn-bubble.dim { opacity: 0.32; filter: saturate(0.55); }
+  .esn-bubble.has { opacity: 1; }
+  .esn-bubble.has[data-href] { cursor: pointer; }
+  .esn-bubble.has:hover .b-circle {
+    filter: brightness(1.06);
+    stroke-width: 2.5;
+  }
+  .esn-bubble.has[data-href]:hover .b-link-icon { opacity: 1; }
+  .esn-bubble.has[data-href]:focus { outline: none; }
+  .esn-bubble.has[data-href]:focus .b-circle { stroke-width: 3; }
+  .esn-bubble.dim:hover { opacity: 0.55; }
+
+  .ring-label {
+    font-size: 14px;
+    font-weight: 600;
+    fill: var(--muted);
+    letter-spacing: 0.04em;
+  }
+  .ring-sup { font-size: 9px; font-weight: 600; fill: var(--muted); }
+
+  /* Tooltip */
+  .esn-tooltip {
+    position: absolute;
+    pointer-events: none;
+    background: var(--ink);
+    color: #f5f3ee;
+    font-size: 12px;
+    line-height: 1.45;
+    padding: 10px 12px;
+    border-radius: 6px;
+    max-width: 260px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.12s, transform 0.12s;
+    z-index: 10;
+  }
+  .esn-tooltip.visible { opacity: 1; transform: translateY(0); }
+  .esn-tooltip .tt-name {
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom: 3px;
+    letter-spacing: 0.02em;
+  }
+  .esn-tooltip .tt-status {
+    display: inline-block;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 1px 6px;
+    border-radius: 10px;
+    margin-bottom: 6px;
+  }
+  .esn-tooltip .tt-status.in {
+    background: rgba(120, 180, 110, 0.25);
+    color: #b9d9a8;
+  }
+  .esn-tooltip .tt-status.out {
+    background: rgba(180, 180, 180, 0.18);
+    color: #c8c4ba;
+  }
+  .esn-tooltip .tt-body {
+    color: #d9d4c5;
+  }
+  .esn-tooltip .tt-action {
+    display: block;
+    margin-top: 6px;
+    font-size: 11px;
+    color: #f0c98a;
+    letter-spacing: 0.02em;
+  }
+
+  /* ── Legend ── */
+  .legend {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+    padding: 14px 8px 6px;
+    margin-top: 4px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .legend .swatch {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .legend .dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--d-bubble-secondary);
+    border: 1.5px solid var(--d-secondary-ring);
+  }
+  .legend .dot.dim {
+    opacity: 0.32;
+    filter: saturate(0.55);
+  }
+
+  /* ── Below-diagram lists ── */
+  .lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .list-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+  }
+  .list-card h3 {
+    margin: 0 0 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+  }
+  .list-card ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .list-card li {
+    padding: 8px 0;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+  }
+  .list-card li:first-child { border-top: none; }
+  .list-card li .name { font-weight: 500; color: var(--ink); }
+  .list-card li .meta { color: var(--muted); font-size: 12px; display: block; margin-top: 2px; }
+  .list-card a { color: var(--accent); text-decoration: none; font-size: 12px; }
+  .list-card a:hover { text-decoration: underline; }
+
+  /* ── Source line ── */
+  .source-note {
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 24px;
+  }
+  .source-note a { color: var(--accent-3); text-decoration: none; }
+  .source-note a:hover { text-decoration: underline; }
+
+  /* ── Footer ── */
+  footer {
+    background: var(--card);
+    border-top: 1px solid var(--border);
+    padding: 24px 40px;
+  }
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  footer .footer-left {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+  footer .footer-right { display: flex; gap: 20px; }
+  footer a {
+    font-size: 12px;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.12s;
+  }
+  footer a:hover { color: var(--accent); }
+
+  @media (max-width: 800px) {
+    header { padding: 20px 20px 16px; }
+    .nav-strip { padding: 0 20px; }
+    .container { padding: 24px 20px 60px; }
+    .diagram-wrap { padding: 16px 12px 4px; }
+    .lists { grid-template-columns: 1fr; }
+    .footer-inner { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── Header ── -->
+<header>
+  <div class="header-inner">
+    <h1>The Extended Specimen Network</h1>
+    <p class="subtitle">How specimens, media, field records, and derived knowledge connect across the Carlquist ESN</p>
+  </div>
+</header>
+
+<!-- ── Nav strip ── -->
+<nav class="nav-strip">
+  <div class="nav-strip-inner">
+    <a href="index.html">Home</a>
+    <a href="extended_specimen.html" class="active">Extended Specimen</a>
+    <a href="index.html#collections">Collections</a>
+    <a href="index.html#data">Data &amp; Tools</a>
+    <a href="index.html#partners">Partners</a>
+  </div>
+</nav>
+
+<!-- ── Main content ── -->
+<div class="container">
+
+  <div class="intro">
+    <h2>From a single specimen to a connected network</h2>
+    <p>
+      The Digital Extended Specimen (DES) framework expands a physical specimen — a pressed plant on a herbarium sheet, a wood block in a xylarium — into a network of linked digital resources. Each layer extends the specimen with new kinds of information, from its direct digital surrogate out to derived knowledge like distributions, descriptions, and trait data.
+    </p>
+    <p>
+      The diagram below shows which extensions of the framework are presently represented in the Sherwin Carlquist ESN. Hover any bubble to see what it means and whether it lives in the network today.
+    </p>
+  </div>
+
+  <div class="diagram-wrap">
+    <svg id="esn-svg" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" aria-label="Extended Specimen Network diagram">
+      <!-- Tertiary outer -->
+      <circle cx="400" cy="400" r="380"
+              fill="var(--d-tertiary-fill)"
+              stroke="var(--d-tertiary-ring)"
+              stroke-width="2"/>
+      <!-- Secondary middle (offset down) -->
+      <circle cx="400" cy="450" r="295"
+              fill="var(--d-secondary-fill)"
+              stroke="var(--d-secondary-ring)"
+              stroke-width="2"
+              stroke-dasharray="6 5"/>
+      <!-- Primary inner -->
+      <circle cx="400" cy="570" r="155"
+              fill="var(--d-primary-fill)"
+              stroke="var(--d-primary-ring)"
+              stroke-width="2"
+              stroke-dasharray="6 5"/>
+      <!-- Physical Specimens inner-most -->
+      <circle cx="400" cy="690" r="62"
+              fill="var(--d-physical-fill)"
+              stroke="var(--d-primary-ring)"
+              stroke-width="2"
+              stroke-dasharray="5 4"/>
+
+      <!-- Ring labels -->
+      <text x="400" y="50" text-anchor="middle" class="ring-label">
+        Tertiary Extension<tspan class="ring-sup" baseline-shift="super">3</tspan>
+      </text>
+      <text x="400" y="210" text-anchor="middle" class="ring-label">
+        Secondary Extension<tspan class="ring-sup" baseline-shift="super">2</tspan>
+      </text>
+      <text x="400" y="445" text-anchor="middle" class="ring-label">
+        Primary Extension<tspan class="ring-sup" baseline-shift="super">1</tspan>
+      </text>
+
+      <!-- ── Tertiary bubbles (6, arc across top) ── -->
+      <!-- Traits: HAS via publications -->
+      <g class="esn-bubble has" data-name="Traits" data-status="in"
+         data-href="publications_explorer.html"
+         data-desc="Anatomical and morphological traits documented across Carlquist's 343 publications — particularly his foundational wood-anatomy work.">
+        <circle class="b-circle" cx="105" cy="430" r="50"
+                fill="var(--d-bubble-tertiary)" stroke="#3a6630" stroke-width="1.5"/>
+        <text class="b-label" x="105" y="435" text-anchor="middle"
+              font-size="14" font-weight="600" fill="#fff">Traits</text>
+        <text class="b-link-icon" x="140" y="395" text-anchor="middle"
+              font-size="14" font-weight="700" fill="#fff">↗</text>
+      </g>
+
+      <!-- Phylogenies: dim -->
+      <g class="esn-bubble dim" data-name="Phylogenies" data-status="out"
+         data-desc="Reconstructed evolutionary trees. Not currently aggregated as a dataset in the Carlquist ESN.">
+        <circle class="b-circle" cx="190" cy="245" r="50"
+                fill="var(--d-bubble-tertiary)" stroke="#3a6630" stroke-width="1.5"/>
+        <text class="b-label" x="190" y="251" text-anchor="middle"
+              font-size="14" font-weight="600" fill="#fff">Phylogenies</text>
+      </g>
+
+      <!-- Descriptions: HAS via publications -->
+      <g class="esn-bubble has" data-name="Descriptions" data-status="in"
+         data-href="publications_explorer.html"
+         data-desc="Detailed morphological, anatomical, and ecological descriptions are central to Carlquist's published record across six decades.">
+        <circle class="b-circle" cx="328" cy="148" r="50"
+                fill="var(--d-bubble-tertiary)" stroke="#3a6630" stroke-width="1.5"/>
+        <text class="b-label" x="328" y="154" text-anchor="middle"
+              font-size="14" font-weight="600" fill="#fff">Descriptions</text>
+        <text class="b-link-icon" x="368" y="112" text-anchor="middle"
+              font-size="14" font-weight="700" fill="#fff">↗</text>
+      </g>
+
+      <!-- Interactions: dim -->
+      <g class="esn-bubble dim" data-name="Interactions" data-status="out"
+         data-desc="Species interaction data (pollinators, herbivores, symbionts). Not currently represented in the Carlquist ESN.">
+        <circle class="b-circle" cx="472" cy="148" r="50"
+                fill="var(--d-bubble-tertiary)" stroke="#3a6630" stroke-width="1.5"/>
+        <text class="b-label" x="472" y="154" text-anchor="middle"
+              font-size="14" font-weight="600" fill="#fff">Interactions</text>
+      </g>
+
+      <!-- Distributions: HAS via publications -->
+      <g class="esn-bubble has" data-name="Distributions" data-status="in"
+         data-href="publications_explorer.html"
+         data-desc="Carlquist's island-biogeography research documents the geographic distributions of plants across the Pacific, California, and beyond.">
+        <circle class="b-circle" cx="610" cy="245" r="50"
+                fill="var(--d-bubble-tertiary)" stroke="#3a6630" stroke-width="1.5"/>
+        <text class="b-label" x="610" y="251" text-anchor="middle"
+              font-size="14" font-weight="600" fill="#fff">Distributions</text>
+        <text class="b-link-icon" x="648" y="212" text-anchor="middle"
+              font-size="14" font-weight="700" fill="#fff">↗</text>
+      </g>
+
+      <!-- Protection Status / Locations: dim -->
+      <g class="esn-bubble dim" data-name="Protection Status &amp; Locations" data-status="out"
+         data-desc="Conservation status and protected-area data. Not currently represented in the Carlquist ESN.">
+        <circle class="b-circle" cx="695" cy="430" r="55"
+                fill="var(--d-bubble-tertiary)" stroke="#3a6630" stroke-width="1.5"/>
+        <text class="b-label" x="695" y="426" text-anchor="middle"
+              font-size="12" font-weight="600" fill="#fff">Protection</text>
+        <text class="b-label" x="695" y="442" text-anchor="middle"
+              font-size="12" font-weight="600" fill="#fff">Status &amp;</text>
+        <text class="b-label" x="695" y="456" text-anchor="middle"
+              font-size="12" font-weight="600" fill="#fff">Locations</text>
+      </g>
+
+      <!-- ── Secondary bubbles (5) ── -->
+      <!-- Field Notes: HAS -->
+      <g class="esn-bubble has" data-name="Field Notes" data-status="in"
+         data-href="https://fwbg.org/carlquist"
+         data-desc="Carlquist's field journals, notebooks, and correspondence are held in the Carlquist Collection at BRIT/FWBG.">
+        <circle class="b-circle" cx="225" cy="555" r="52"
+                fill="var(--d-bubble-secondary)" stroke="#9a832c" stroke-width="1.5"/>
+        <text class="b-label" x="225" y="553" text-anchor="middle"
+              font-size="13" font-weight="600" fill="#2b2a26">Field</text>
+        <text class="b-label" x="225" y="569" text-anchor="middle"
+              font-size="13" font-weight="600" fill="#2b2a26">Notes</text>
+        <text class="b-link-icon" x="262" y="519" text-anchor="middle"
+              font-size="14" font-weight="700" fill="#2b2a26">↗</text>
+      </g>
+
+      <!-- Isotope Samples: dim -->
+      <g class="esn-bubble dim" data-name="Isotope Samples" data-status="out"
+         data-desc="Physical samples used for isotope analysis. Not currently represented in the Carlquist ESN.">
+        <circle class="b-circle" cx="290" cy="395" r="50"
+                fill="var(--d-bubble-secondary)" stroke="#9a832c" stroke-width="1.5"/>
+        <text class="b-label" x="290" y="393" text-anchor="middle"
+              font-size="12" font-weight="600" fill="#2b2a26">Isotope</text>
+        <text class="b-label" x="290" y="408" text-anchor="middle"
+              font-size="12" font-weight="600" fill="#2b2a26">Samples</text>
+      </g>
+
+      <!-- Morphometric Data: dim -->
+      <g class="esn-bubble dim" data-name="Morphometric Data" data-status="out"
+         data-desc="Quantitative measurements of plant structures. Not yet aggregated as a dataset, though many measurements appear in Carlquist's published wood-anatomy work.">
+        <circle class="b-circle" cx="400" cy="335" r="55"
+                fill="var(--d-bubble-secondary)" stroke="#9a832c" stroke-width="1.5"/>
+        <text class="b-label" x="400" y="332" text-anchor="middle"
+              font-size="12" font-weight="600" fill="#2b2a26">Morphometric</text>
+        <text class="b-label" x="400" y="348" text-anchor="middle"
+              font-size="12" font-weight="600" fill="#2b2a26">Data</text>
+      </g>
+
+      <!-- Field Images: HAS -->
+      <g class="esn-bubble has" data-name="Field Images" data-status="in"
+         data-href="https://texashistory.unt.edu/explore/collections/SJCC/"
+         data-desc="Digitized field photographs from Carlquist's career, accessible via the Portal to Texas History.">
+        <circle class="b-circle" cx="510" cy="395" r="52"
+                fill="var(--d-bubble-secondary)" stroke="#9a832c" stroke-width="1.5"/>
+        <text class="b-label" x="510" y="393" text-anchor="middle"
+              font-size="13" font-weight="600" fill="#2b2a26">Field</text>
+        <text class="b-label" x="510" y="409" text-anchor="middle"
+              font-size="13" font-weight="600" fill="#2b2a26">Images</text>
+        <text class="b-link-icon" x="547" y="359" text-anchor="middle"
+              font-size="14" font-weight="700" fill="#2b2a26">↗</text>
+      </g>
+
+      <!-- Gene Sequences: dim -->
+      <g class="esn-bubble dim" data-name="Gene Sequences" data-status="out"
+         data-desc="DNA / RNA sequence data linked to specimens. Not currently represented in the Carlquist ESN.">
+        <circle class="b-circle" cx="575" cy="555" r="52"
+                fill="var(--d-bubble-secondary)" stroke="#9a832c" stroke-width="1.5"/>
+        <text class="b-label" x="575" y="553" text-anchor="middle"
+              font-size="13" font-weight="600" fill="#2b2a26">Gene</text>
+        <text class="b-label" x="575" y="569" text-anchor="middle"
+              font-size="13" font-weight="600" fill="#2b2a26">Sequences</text>
+      </g>
+
+      <!-- ── Primary inner bubbles (2) ── -->
+      <!-- Digital Specimen Record: HAS -->
+      <g class="esn-bubble has" data-name="Digital Specimen Record" data-status="in"
+         data-href="https://www.cch2.org/portal/collections/misc/collprofiles.php?collid=17"
+         data-desc="Digital catalog records for vascular plant and wood specimens at the RSA Herbarium and Xylarium, served through the CCH2 portal.">
+        <circle class="b-circle" cx="338" cy="590" r="48"
+                fill="var(--d-bubble-primary)" stroke="#7d2e1f" stroke-width="1.5"/>
+        <text class="b-label" x="338" y="585" text-anchor="middle"
+              font-size="11" font-weight="700" fill="#fff">Digital</text>
+        <text class="b-label" x="338" y="599" text-anchor="middle"
+              font-size="11" font-weight="700" fill="#fff">Specimen</text>
+        <text class="b-label" x="338" y="613" text-anchor="middle"
+              font-size="11" font-weight="700" fill="#fff">Record</text>
+        <text class="b-link-icon" x="373" y="557" text-anchor="middle"
+              font-size="13" font-weight="700" fill="#fff">↗</text>
+      </g>
+
+      <!-- Specimen Media: HAS -->
+      <g class="esn-bubble has" data-name="Specimen Media" data-status="in"
+         data-href="https://www.cch2.org/portal/collections/misc/collprofiles.php?collid=17"
+         data-desc="Digitized images of specimens — high-resolution herbarium sheet scans and wood-section imagery, served alongside specimen records.">
+        <circle class="b-circle" cx="462" cy="590" r="48"
+                fill="var(--d-bubble-primary)" stroke="#7d2e1f" stroke-width="1.5"/>
+        <text class="b-label" x="462" y="587" text-anchor="middle"
+              font-size="12" font-weight="700" fill="#fff">Specimen</text>
+        <text class="b-label" x="462" y="603" text-anchor="middle"
+              font-size="12" font-weight="700" fill="#fff">Media</text>
+        <text class="b-link-icon" x="497" y="557" text-anchor="middle"
+              font-size="13" font-weight="700" fill="#fff">↗</text>
+      </g>
+
+      <!-- Physical Specimens center -->
+      <g class="esn-bubble has" data-name="Physical Specimens" data-status="in"
+         data-href="index.html#collections"
+         data-desc="The physical foundation: vascular-plant specimens at the RSA Herbarium and wood specimens at the RSA Xylarium (California Botanic Garden), plus the Carlquist Collection of archival materials at BRIT/FWBG.">
+        <text class="b-label" x="400" y="687" text-anchor="middle"
+              font-size="13" font-weight="700" fill="#2b2a26">Physical</text>
+        <text class="b-label" x="400" y="703" text-anchor="middle"
+              font-size="13" font-weight="700" fill="#2b2a26">Specimens</text>
+        <text class="b-link-icon" x="445" y="655" text-anchor="middle"
+              font-size="13" font-weight="700" fill="#2b2a26">↗</text>
+        <circle class="b-circle" cx="400" cy="690" r="62"
+                fill="transparent" stroke="transparent"/>
+      </g>
+    </svg>
+
+    <div class="legend">
+      <span class="swatch"><span class="dot"></span> In the Carlquist ESN</span>
+      <span class="swatch"><span class="dot dim"></span> Part of the broader framework, not represented</span>
+    </div>
+
+    <div class="esn-tooltip" id="esn-tooltip" role="tooltip" aria-hidden="true"></div>
+  </div>
+
+  <!-- Below-diagram lists -->
+  <div class="lists">
+    <div class="list-card">
+      <h3>Represented in the Carlquist ESN</h3>
+      <ul>
+        <li>
+          <span class="name">Physical Specimens</span>
+          <span class="meta">RSA Herbarium &amp; RSA Xylarium (California Botanic Garden); Carlquist Collection at BRIT/FWBG.</span>
+        </li>
+        <li>
+          <span class="name">Digital Specimen Records &amp; Media</span>
+          <span class="meta">Specimen records and imagery via the CCH2 portal (<a href="https://www.cch2.org/portal/collections/misc/collprofiles.php?collid=17" target="_blank" rel="noopener">RSA</a> · <a href="https://www.cch2.org/portal/collections/misc/collprofiles.php?collid=105" target="_blank" rel="noopener">RSA-Wood</a>).</span>
+        </li>
+        <li>
+          <span class="name">Field Notes</span>
+          <span class="meta">Notebooks &amp; correspondence in the <a href="https://fwbg.org/carlquist" target="_blank" rel="noopener">Carlquist Collection</a> at BRIT/FWBG.</span>
+        </li>
+        <li>
+          <span class="name">Field Images</span>
+          <span class="meta">Digitized photographs via the <a href="https://texashistory.unt.edu/explore/collections/SJCC/" target="_blank" rel="noopener">Portal to Texas History</a>.</span>
+        </li>
+        <li>
+          <span class="name">Descriptions, Traits &amp; Distributions</span>
+          <span class="meta">Documented across 343 publications. Browse via the <a href="publications_explorer.html">Publications Explorer</a> or the <a href="https://doi.org/10.5281/zenodo.18687469" target="_blank" rel="noopener">Zenodo dataset</a>.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="list-card">
+      <h3>Part of the broader framework</h3>
+      <ul>
+        <li>
+          <span class="name">Isotope Samples</span>
+          <span class="meta">Not currently part of the network.</span>
+        </li>
+        <li>
+          <span class="name">Morphometric Data</span>
+          <span class="meta">Many quantitative measurements appear in Carlquist's published wood-anatomy work but are not yet aggregated as a discrete dataset.</span>
+        </li>
+        <li>
+          <span class="name">Gene Sequences</span>
+          <span class="meta">Not currently part of the network.</span>
+        </li>
+        <li>
+          <span class="name">Phylogenies</span>
+          <span class="meta">Not currently aggregated as data, though Carlquist's work informed phylogenetic study of many groups.</span>
+        </li>
+        <li>
+          <span class="name">Interactions &amp; Protection Status</span>
+          <span class="meta">Not currently part of the network.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="source-note">
+    Diagram adapted from the Digital Extended Specimen framework. See, e.g., Hardisty et al. (2022),
+    <em>“A national agenda for the future of biodiversity research”</em> and related DES literature.
+  </div>
+
+</div><!-- /.container -->
+
+<!-- ── Footer ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-left">
+      Sherwin Carlquist Digital Extended Specimen Network<br>
+      NSF Awards 2133562 (BRIT) &amp; 2133561 (CalBG) &nbsp;·&nbsp; Botanical Research Institute of Texas &amp; California Botanic Garden
+    </div>
+    <div class="footer-right">
+      <a href="/cdn-cgi/l/email-protection#a5cfc7c0d6d1e5c7d7ccd18bcad7c2">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+(function() {
+  const svg = document.getElementById('esn-svg');
+  const tip = document.getElementById('esn-tooltip');
+  const wrap = document.querySelector('.diagram-wrap');
+  if (!svg || !tip || !wrap) return;
+
+  const bubbles = svg.querySelectorAll('.esn-bubble');
+
+  function showTip(target, evt) {
+    const name = target.getAttribute('data-name') || '';
+    const desc = target.getAttribute('data-desc') || '';
+    const status = target.getAttribute('data-status') || 'out';
+    const statusLabel = status === 'in' ? 'In the Carlquist ESN' : 'Broader framework';
+    tip.innerHTML =
+      '<div class="tt-name">' + name + '</div>' +
+      '<span class="tt-status ' + (status === 'in' ? 'in' : 'out') + '">' + statusLabel + '</span>' +
+      '<div class="tt-body">' + desc + '</div>';
+    positionTip(evt);
+    tip.classList.add('visible');
+    tip.setAttribute('aria-hidden', 'false');
+  }
+
+  function positionTip(evt) {
+    const wr = wrap.getBoundingClientRect();
+    const tw = tip.offsetWidth;
+    const th = tip.offsetHeight;
+    let x = evt.clientX - wr.left + 14;
+    let y = evt.clientY - wr.top + 14;
+    if (x + tw + 12 > wr.width) x = evt.clientX - wr.left - tw - 14;
+    if (y + th + 12 > wr.height) y = evt.clientY - wr.top - th - 14;
+    if (x < 4) x = 4;
+    if (y < 4) y = 4;
+    tip.style.left = x + 'px';
+    tip.style.top = y + 'px';
+  }
+
+  function hideTip() {
+    tip.classList.remove('visible');
+    tip.setAttribute('aria-hidden', 'true');
+  }
+
+  bubbles.forEach(function(b) {
+    b.addEventListener('mouseenter', function(e) { showTip(b, e); });
+    b.addEventListener('mousemove',  function(e) { positionTip(e); });
+    b.addEventListener('mouseleave', hideTip);
+    // Touch / focus support
+    b.setAttribute('tabindex', '0');
+    b.addEventListener('focus', function(e) {
+      const r = b.getBoundingClientRect();
+      const fakeEvt = { clientX: r.left + r.width / 2, clientY: r.top + r.height / 2 };
+      showTip(b, fakeEvt);
+    });
+    b.addEventListener('blur', hideTip);
+  });
+})();
+</script>
+
+</body>
+</html>
