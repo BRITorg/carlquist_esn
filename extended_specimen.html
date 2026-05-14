@@ -337,7 +337,6 @@
 <nav class="nav-strip">
   <div class="nav-strip-inner">
     <a href="index.html">Home</a>
-    <a href="extended_specimen.html" class="active">Extended Specimen</a>
     <a href="index.html#collections">Collections</a>
     <a href="index.html#data">Data &amp; Tools</a>
     <a href="index.html#partners">Partners</a>
@@ -350,7 +349,7 @@
   <div class="intro">
     <h2>From a single specimen to a connected network</h2>
     <p>
-      The Digital Extended Specimen (DES) framework expands a physical specimen — a pressed plant on a herbarium sheet, a wood block in a xylarium — into a network of linked digital resources. Each layer extends the specimen with new kinds of information, from its direct digital surrogate out to derived knowledge like distributions, descriptions, and trait data.
+      The Extended Specimen Network (ESN) concept expands a physical specimen — a pressed plant on a herbarium sheet, a wood block in a xylarium — into a network of linked digital resources. Each layer extends the specimen with new kinds of information, from its direct digital surrogate out to derived knowledge like distributions, descriptions, and trait data.
     </p>
     <p>
       The diagram below shows which extensions of the framework are presently represented in the Sherwin Carlquist ESN. Hover any bubble to see what it means and whether it lives in the network today.
@@ -633,10 +632,7 @@
     </div>
   </div>
 
-  <div class="source-note">
-    Diagram adapted from the Digital Extended Specimen framework. See, e.g., Hardisty et al. (2022),
-    <em>“A national agenda for the future of biodiversity research”</em> and related DES literature.
-  </div>
+  <div class="source-note">Diagram adapted from "Extending U.S. Biodiversity Collections to Promote Research and Education", Thiers et al. (2019).</div>
 
 </div><!-- /.container -->
 
@@ -648,7 +644,7 @@
       NSF Awards 2133562 (BRIT) &amp; 2133561 (CalBG) &nbsp;·&nbsp; Botanical Research Institute of Texas &amp; California Botanic Garden
     </div>
     <div class="footer-right">
-      <a href="/cdn-cgi/l/email-protection#a5cfc7c0d6d1e5c7d7ccd18bcad7c2">Contact</a>
+      <a href="/cdn-cgi/l/email-protection#8be1e9eef8ffcbe9f9e2ffa5e4f9ec">Contact</a>
     </div>
   </div>
 </footer>
@@ -666,11 +662,16 @@
     const name = target.getAttribute('data-name') || '';
     const desc = target.getAttribute('data-desc') || '';
     const status = target.getAttribute('data-status') || 'out';
+    const href = target.getAttribute('data-href') || '';
     const statusLabel = status === 'in' ? 'In the Carlquist ESN' : 'Broader framework';
+    const actionHtml = href
+      ? '<span class="tt-action">Click to open ↗</span>'
+      : '';
     tip.innerHTML =
       '<div class="tt-name">' + name + '</div>' +
       '<span class="tt-status ' + (status === 'in' ? 'in' : 'out') + '">' + statusLabel + '</span>' +
-      '<div class="tt-body">' + desc + '</div>';
+      '<div class="tt-body">' + desc + '</div>' +
+      actionHtml;
     positionTip(evt);
     tip.classList.add('visible');
     tip.setAttribute('aria-hidden', 'false');
@@ -696,12 +697,27 @@
   }
 
   bubbles.forEach(function(b) {
+    const href = b.getAttribute('data-href');
     b.addEventListener('mouseenter', function(e) { showTip(b, e); });
     b.addEventListener('mousemove',  function(e) { positionTip(e); });
     b.addEventListener('mouseleave', hideTip);
+    // Click → open in new tab if there's a link
+    if (href) {
+      b.setAttribute('role', 'link');
+      b.setAttribute('aria-label', (b.getAttribute('data-name') || '') + ' — open resource');
+      b.addEventListener('click', function() {
+        window.open(href, '_blank', 'noopener');
+      });
+      b.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          window.open(href, '_blank', 'noopener');
+        }
+      });
+    }
     // Touch / focus support
     b.setAttribute('tabindex', '0');
-    b.addEventListener('focus', function(e) {
+    b.addEventListener('focus', function() {
       const r = b.getBoundingClientRect();
       const fakeEvt = { clientX: r.left + r.width / 2, clientY: r.top + r.height / 2 };
       showTip(b, fakeEvt);
