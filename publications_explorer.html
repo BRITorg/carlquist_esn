@@ -26,6 +26,14 @@
   }
   header h1 { margin: 0 0 4px; font-size: 22px; font-weight: 600; }
   header p { margin: 0; color: var(--muted); font-size: 13px; }
+  .home-link {
+    display: inline-flex; align-items: center; gap: 5px;
+    margin-bottom: 8px;
+    font-size: 12px; color: var(--accent); text-decoration: none;
+    font-weight: 500;
+  }
+  .home-link:hover { text-decoration: underline; }
+  .home-link .arrow { font-size: 13px; line-height: 1; }
   .container { padding: 20px 32px 60px; max-width: 1400px; margin: 0 auto; }
   .kpis {
     display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 18px;
@@ -109,9 +117,24 @@
 </head>
 <body>
 <header>
+  <a class="home-link" id="home-link" href="https://britorg.github.io/carlquist_esn/"><span class="arrow">←</span> Carlquist ESN home</a>
   <h1>Sherwin Carlquist — Publications Explorer</h1>
   <p>343 publications across 1956–2021. Use the filters to slice by year, journal, type, or co‑author.</p>
 </header>
+<script>
+  // Open the home link in the same tab when viewed on the ESN site,
+  // otherwise open in a new tab (embedded, local file, mirror, etc.).
+  (function() {
+    var link = document.getElementById('home-link');
+    if (!link) return;
+    var onSite = window.location.host === 'britorg.github.io'
+              && window.location.pathname.indexOf('/carlquist_esn/') === 0;
+    if (!onSite) {
+      link.target = '_blank';
+      link.rel = 'noopener';
+    }
+  })();
+</script>
 <div class="container">
   <div class="kpis">
     <div class="kpi"><div class="label">Publications</div><div class="value" id="kpi-total">—</div><div class="sub" id="kpi-total-sub">filtered</div></div>
