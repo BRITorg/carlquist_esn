@@ -1,0 +1,32 @@
+# Sherwin Carlquist Digital Extended Specimen Network
+
+> Public site for a BRIT/Fort Worth Botanic Garden and California Botanic Garden project (NSF Awards 2133562 and 2133561) that links the botanical specimens, field images, publications, and archival materials of Sherwin Carlquist (1930–2021), a leading authority on plant wood anatomy, island biogeography, and systematics. The network has many parts (specimens, media, field notes, field images, publications); the publications bibliography is only one of them, and it is released separately as a CC0 dataset.
+
+The site is a static HTML site. The publications explorer renders its data with JavaScript, so its content is not visible to non-JS crawlers. The full bibliography is in [llms-full.txt](https://britorg.github.io/carlquist_esn/llms-full.txt), and the underlying data is in the Zenodo dataset below. That dataset covers publications only. It does not include the specimens, images, field notes, or archival materials.
+
+## Site pages
+
+- [Home](https://britorg.github.io/carlquist_esn/): Project overview, collections, data and tools, products, and partners.
+- [The Extended Specimen Network diagram](https://britorg.github.io/carlquist_esn/extended_specimen.html): Interactive concept diagram showing which layers of the Extended Specimen framework (physical specimens, digital records and media, field notes and images, traits, descriptions, distributions) are represented in the network.
+- [Publications Explorer](https://britorg.github.io/carlquist_esn/publications_explorer.html): Dashboard to browse, filter (year, journal, type, co-author), and chart all 343 publications, with links to Wikidata items.
+
+## Data
+
+- [Carlquist publications dataset (Zenodo, CC0)](https://doi.org/10.5281/zenodo.18687469): Covers the publications component of the network only, not specimens, media, field notes, or field images. Bibliographic metadata for all 343 publications in CSL-JSON and Dublin Core, with lookup tables for journals and co-authors.
+- [Publications dataset repository (GitHub)](https://github.com/BRITorg/carlquist_publications_dataset): Source repository for the dataset.
+- [Sherwin Carlquist on Wikidata (Q2251003)](https://www.wikidata.org/wiki/Q2251003): Person record, interlinked with publication and journal items.
+
+## Collections
+
+- [Carlquist Collection at BRIT/FWBG](https://fwbg.org/carlquist): Correspondence, reprints, field materials, and related archives.
+- [Field images, Portal to Texas History](https://texashistory.unt.edu/explore/collections/SJCC/): Digitized field photographs from the collection.
+- [RSA Herbarium (CCH2)](https://www.cch2.org/portal/collections/misc/collprofiles.php?collid=17): Vascular plant specimens at California Botanic Garden.
+- [RSA-Wood Xylarium (CCH2)](https://www.cch2.org/portal/collections/misc/collprofiles.php?collid=105): Wood specimens central to Carlquist's comparative anatomy research.
+
+## Optional
+
+- [The Sherwin Carlquist Website](https://britorg.github.io/carlquist_web/): Revived website on his life and scientific legacy.
+- [Sincerely, Sherwin (CalBG exhibit)](https://storymaps.arcgis.com/stories/75f901d150b24d21a6ce0b6cfcaa7913): Online exhibit from California Botanic Garden.
+- [Original Carlquist website (Internet Archive)](https://web.archive.org/web/20220525065400/http://www.sherwincarlquist.com/)
+- [Sherwin Carlquist on Wikipedia](https://en.wikipedia.org/wiki/Sherwin_Carlquist)
+- [Site source code (GitHub)](https://github.com/BRITorg/carlquist_esn)

@@ -12,3 +12,9 @@ Published at: **https://britorg.github.io/carlquist_esn/**
 - `extended_specimen.html` — an interactive diagram mapping project resources onto the Extended Specimen Network framework. Hover a bubble for a description; click an active bubble to open the underlying resource.
 - `publications_explorer.html` — an interactive dashboard for browsing, filtering, and visualizing all 343 known Carlquist publications (1956–2021), sourced from the companion [publications dataset](https://github.com/BRITorg/carlquist_publications_dataset) ([Zenodo](https://doi.org/10.5281/zenodo.18687469), CC0).
 
+## LLM-readable files
+
+- `llms.txt` — concise, [llmstxt.org](https://llmstxt.org/)-style index of the site's pages, data, and collections, for LLMs and agents.
+- `llms-full.txt` — expanded plain-text version of the site content, including the full list of 343 publications (which the explorer only renders with JavaScript). The publications dataset covers publications only, which is one component of the network.
+
+`llms-full.txt` is generated from the `RAW` JSON in `publications_explorer.html`; regenerate its publications list whenever that data changes.
