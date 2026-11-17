@@ -120,9 +120,9 @@ def replace_llms_list(txt, pubs):
     return txt
 
 
-def update_counts(txt, old_n, new_n):
-    # Only touch "<old_n> publications" / "<old_n> known publications".
-    pat = re.compile(rf"\b{old_n}\b(?= (?:known )?publications)")
+def update_counts(txt, new_n):
+    # Any "NNN [known] [Carlquist] publications" is set to the current count.
+    pat = re.compile(r"(?<!than )\b\d{3}\b(?= (?:known )?(?:Carlquist )?publications)")
     return pat.sub(str(new_n), txt)
 
 
@@ -154,7 +154,7 @@ def main():
     for name in COUNT_FILES:
         p = ROOT / name
         base = changes.get(p, p.read_text(encoding="utf-8"))
-        changes[p] = update_counts(base, old_n, new_n) if old_n != new_n else base
+        changes[p] = update_counts(base, new_n)
 
     stale = []
     for p, text in changes.items():
