@@ -15,6 +15,6 @@ Published at: **https://britorg.github.io/carlquist_esn/**
 ## LLM-readable files
 
 - `llms.txt` — concise, [llmstxt.org](https://llmstxt.org/)-style index of the site's pages, data, and collections, for LLMs and agents.
-- `llms-full.txt` — expanded plain-text version of the site content, including the full list of 343 publications (which the explorer only renders with JavaScript). The publications dataset covers publications only, which is one component of the network.
+- `llms-full.txt` — expanded plain-text version of the site content, including the full list of 346 publications (which the explorer only renders with JavaScript). The publications dataset covers publications only, which is one component of the network.
 
 `llms-full.txt` is generated from the `RAW` JSON in `publications_explorer.html`; regenerate its publications list whenever that data changes.

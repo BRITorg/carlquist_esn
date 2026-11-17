@@ -8,11 +8,11 @@ The site is a static HTML site. The publications explorer renders its data with 
 
 - [Home](https://britorg.github.io/carlquist_esn/): Project overview, collections, data and tools, products, and partners.
 - [The Extended Specimen Network diagram](https://britorg.github.io/carlquist_esn/extended_specimen.html): Interactive concept diagram showing which layers of the Extended Specimen framework (physical specimens, digital records and media, field notes and images, traits, descriptions, distributions) are represented in the network.
-- [Publications Explorer](https://britorg.github.io/carlquist_esn/publications_explorer.html): Dashboard to browse, filter (year, journal, type, co-author), and chart all 343 publications, with links to Wikidata items.
+- [Publications Explorer](https://britorg.github.io/carlquist_esn/publications_explorer.html): Dashboard to browse, filter (year, journal, type, co-author), and chart all 346 publications, with links to Wikidata items.
 
 ## Data
 
-- [Carlquist publications dataset (Zenodo, CC0)](https://doi.org/10.5281/zenodo.18687469): Covers the publications component of the network only, not specimens, media, field notes, or field images. Bibliographic metadata for all 343 publications in CSL-JSON and Dublin Core, with lookup tables for journals and co-authors.
+- [Carlquist publications dataset (Zenodo, CC0)](https://doi.org/10.5281/zenodo.18687469): Covers the publications component of the network only, not specimens, media, field notes, or field images. Bibliographic metadata for all 346 publications in CSL-JSON and Dublin Core, with lookup tables for journals and co-authors.
 - [Publications dataset repository (GitHub)](https://github.com/BRITorg/carlquist_publications_dataset): Source repository for the dataset.
 - [Sherwin Carlquist on Wikidata (Q2251003)](https://www.wikidata.org/wiki/Q2251003): Person record, interlinked with publication and journal items.
 

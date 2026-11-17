@@ -21,18 +21,18 @@ The project is a collaboration between BRIT at the Fort Worth Botanic Garden (NS
 ## Data and tools
 
 - Extended Specimen Network diagram (https://britorg.github.io/carlquist_esn/extended_specimen.html): concentric rings show Primary, Secondary, and Tertiary Extensions of a specimen. Diagram adapted from Thiers et al. (2019), "Extending U.S. Biodiversity Collections to Promote Research and Education".
-  - Represented in the Carlquist ESN: Physical Specimens (RSA Herbarium, RSA Xylarium, Carlquist Collection at BRIT/FWBG); Digital Specimen Record and Specimen Media (via CCH2); Field Notes (notebooks and correspondence in the BRIT/FWBG collection); Field Images (Portal to Texas History); Descriptions, Traits, and Distributions (documented across the 343 publications).
+  - Represented in the Carlquist ESN: Physical Specimens (RSA Herbarium, RSA Xylarium, Carlquist Collection at BRIT/FWBG); Digital Specimen Record and Specimen Media (via CCH2); Field Notes (notebooks and correspondence in the BRIT/FWBG collection); Field Images (Portal to Texas History); Descriptions, Traits, and Distributions (documented across the 346 publications).
   - Part of the broader framework but not represented: Isotope Samples, Morphometric Data (measurements appear in published wood-anatomy work but are not aggregated), Gene Sequences, Phylogenies (not aggregated, though his work informed phylogenetic study), Interactions, Protection Status & Locations.
-- Publications dataset (one component of the network, covering publications only; it does not include specimens, media, field notes, field images, or archival materials): bibliographic metadata for all 343 known publications, 1956–2021, in CSL-JSON and Dublin Core, with lookup tables for journals and co-authors. CC0. https://doi.org/10.5281/zenodo.18687469 (repository: https://github.com/BRITorg/carlquist_publications_dataset)
+- Publications dataset (one component of the network, covering publications only; it does not include specimens, media, field notes, field images, or archival materials): bibliographic metadata for all 346 known publications, 1956–2021, in CSL-JSON and Dublin Core, with lookup tables for journals and co-authors. CC0. https://doi.org/10.5281/zenodo.18687469 (repository: https://github.com/BRITorg/carlquist_publications_dataset)
 - Publications Explorer (https://britorg.github.io/carlquist_esn/publications_explorer.html): interactive dashboard to filter by year, journal, type, or co-author, with charts and links to Wikidata items.
-- Wikidata integration: all 343 publications are matched to or created as Wikidata items; person, publication, and journal items are interlinked and queryable via the Wikidata Query Service.
+- Wikidata integration: all 346 publications are matched to or created as Wikidata items; person, publication, and journal items are interlinked and queryable via the Wikidata Query Service.
 
 ## Products
 
 - The Sherwin Carlquist Website: https://britorg.github.io/carlquist_web/ (original: https://web.archive.org/web/20220525065400/http://www.sherwincarlquist.com/)
 - Sincerely, Sherwin: online exhibit by California Botanic Garden. https://storymaps.arcgis.com/stories/75f901d150b24d21a6ce0b6cfcaa7913
 
-## Publications (343, chronological)
+## Publications (346, chronological)
 
 Format: Year. Authors. Title. Journal volume(issue): pages. DOI or URL (if any). Wikidata item.
 This list is only the publications component of the network. Data are embedded from the Zenodo publications dataset; see it for the authoritative version.
@@ -48,6 +48,7 @@ This list is only the publications component of the network. Data are embedded f
 - 1958. Carlquist, S. The Woods and Flora of the Florida Keys. Tropical Woods 109: 1-37. https://www.wikidata.org/wiki/Q139106794
 - 1958. Carlquist, S. Wood Anatomy of Heliantheae (Compositae). Tropical Woods 108: 1-30. https://www.wikidata.org/wiki/Q139076816
 - 1958. Carlquist, S. Anatomy And Systematic Position of Centaurodendron and Yunquea (Compositae). Brittonia 10(2): 78-93. https://doi.org/10.2307/2804919 https://www.wikidata.org/wiki/Q139077505
+- 1958. Carlquist, S. Anatomy of the Guayana Mutisieae. Part II. Memoirs of the New York Botanical Garden 10(1): 157-184. https://www.biodiversitylibrary.org/part/324546 https://www.wikidata.org/wiki/Q141167197
 - 1959. Carlquist, S. Glandular Structures of Holocarpha and Their Ontogeny. American Journal of Botany 46: 300-308. https://doi.org/10.1002/j.1537-2197.1959.tb07016.x https://www.wikidata.org/wiki/Q139077130
 - 1959. Carlquist, S. Studies on Madinae: Anatomy, Cytology, and Evolutionary Relationships. Aliso 4(2): 171-236. https://doi.org/10.5642/aliso.19590402.02 https://www.wikidata.org/wiki/Q125293619
 - 1959. Carlquist, S. The Leaf of Calycadenia and its Glandular Appendages. American Journal of Botany 46: 70-80. https://doi.org/10.1002/j.1537-2197.1959.tb06985.x https://www.wikidata.org/wiki/Q139077131
@@ -56,9 +57,9 @@ This list is only the publications component of the network. Data are embedded f
 - 1960. Carlquist, S. Anatomy of Guayana xyridaceae: Abolboda, Orectanthe, and Achlyphila. Memoirs of the New York Botanical Garden 10(2): 65-117. https://www.biodiversitylibrary.org/part/324550 https://www.wikidata.org/wiki/Q139076662
 - 1960. Carlquist, S. Wood Anatomy of Astereae (Compositae). Tropical Woods 113: 54-84. https://www.wikidata.org/wiki/Q139076818
 - 1960. Carlquist, S. Wood Anatomy of Cichorieae (Compositae). Tropical Woods 112: 65-91. https://www.wikidata.org/wiki/Q139076820
-- 1961. Carlquist, S. Comparative Plant Anatomy. . https://www.wikidata.org/wiki/Q138774543
 - 1961. Carlquist, S. Pollen Morphology of Rapateaceae. Aliso 5(1): 39-66. https://doi.org/10.5642/aliso.19610501.07 https://www.wikidata.org/wiki/Q139077249
 - 1961. Carlquist, S. Wood Anatomy of Inuleae (Compositae). Aliso 5(1): 21-37. https://doi.org/10.5642/aliso.19610501.06 https://www.wikidata.org/wiki/Q139077251
+- 1961. Carlquist, S. Comparative Plant Anatomy. https://www.wikidata.org/wiki/Q138774543
 - 1962. Carlquist, S. A Theory of Paedomorphosis in Dicotyledonous Woods. Phytomorphology 12: 30-45. https://www.wikidata.org/wiki/Q139077642
 - 1962. Carlquist, S. Ontogeny and Comparative Anatomy of Thorns of Hawaiian Lobeliaceae. American Journal of Botany 49: 413-419. https://doi.org/10.1002/j.1537-2197.1962.tb14959.x https://www.wikidata.org/wiki/Q139077132
 - 1962. Carlquist, S. Trematolobelia: Seed Dispersal; Anatomy of Fruit and Seeds. Pacific Science 16: 126-134. https://www.wikidata.org/wiki/Q100377029
@@ -68,9 +69,9 @@ This list is only the publications component of the network. Data are embedded f
 - 1964. Carlquist, S. Morphology and Relationships of Lactoridaceae. Aliso 5(4): 421-435. https://doi.org/10.5642/aliso.19640504.03 https://www.wikidata.org/wiki/Q139077254
 - 1964. Carlquist, S. Wood Anatomy of Vernonieae (Compositae). Aliso 5(4): 451-467. https://doi.org/10.5642/aliso.19640504.05 https://www.wikidata.org/wiki/Q139077255
 - 1964. Carlquist, S. Pollen Morphology and Evolution of Sarcolaenaceae (Chlaenaceae). Brittonia 16(3): 231-254. https://doi.org/10.2307/2805059 https://www.wikidata.org/wiki/Q139077506
-- 1965. Carlquist, S. Island Life. A Natural History of the Islands of the World. . https://www.wikidata.org/wiki/Q138774544
 - 1965. Carlquist, S. Wood Anatomy of Cynareae (Compositae). Aliso 6(1): 13-24. https://doi.org/10.5642/aliso.19650601.04 https://www.wikidata.org/wiki/Q139077256
 - 1965. Carlquist, S. Wood Anatomy of Eupatorieae (Compositae). Aliso 6(1): 89-103. https://doi.org/10.5642/aliso.19650601.07 https://www.wikidata.org/wiki/Q139077257
+- 1965. Carlquist, S. Island Life. A Natural History of the Islands of the World. https://www.wikidata.org/wiki/Q138774544
 - 1966. Carlquist, S. Anatomy of Rapateaceae. Roots and Stems. Phytomorphology 16: 17-38. https://www.wikidata.org/wiki/Q139077643
 - 1966. Carlquist, S. The Biota of Long-Distance Dispersal. II. Loss of Dispersibility in Pacific Compositae. Evolution 20: 30-48. https://doi.org/10.1111/j.1558-5646.1966.tb03341.x https://www.wikidata.org/wiki/Q46082808
 - 1966. Carlquist, S. The Biota of Long-Distance Dispersal. IV. Genetic Systems in the Floras of Oceanic Islands. Evolution 20: 433-455. https://doi.org/10.2307/2406583 https://www.wikidata.org/wiki/Q44838324
@@ -88,21 +89,21 @@ This list is only the publications component of the network. Data are embedded f
 - 1969. Carlquist, S. A New Species of Scaevola (Goodeniaceae) from Tahiti. Annals of the Missouri Botanical Garden 56(3). https://doi.org/10.2307/2394860 https://www.wikidata.org/wiki/Q55808962
 - 1969. Carlquist, S. Wood Anatomy of Goodeniaceae and the Problem of Insular Woodiness. Annals of the Missouri Botanical Garden 56(3): 358-390. https://doi.org/10.2307/2394850 https://www.wikidata.org/wiki/Q139077014
 - 1969. Carlquist, S. Wood Anatomy of Lobelioideae (Campanulaceae). Biotropica 1(2): 47-72. https://doi.org/10.2307/2989761 https://www.wikidata.org/wiki/Q139106795
-- 1970. Carlquist, S. Hawaii. A Natural History. . https://www.wikidata.org/wiki/Q138774545
 - 1970. Carlquist, S. Wood Anatomy of Echium (Boraginaceae). Aliso 7(2): 183-199. https://doi.org/10.5642/aliso.19700702.07 https://www.wikidata.org/wiki/Q96016326
 - 1970. Carlquist, S. Wood Anatomy of Hawaiian, Macaronesian, and Other Species of Euphorbia. Botanical Journal of the Linnean Society 63: 181-193. https://www.wikidata.org/wiki/Q139077457
+- 1970. Carlquist, S. Hawaii. A Natural History. https://www.wikidata.org/wiki/Q138774545
 - 1970. Carlquist, S. Wood Anatomy of Insular Species of Plantago and the Problem of Raylessness. Bulletin of the Torrey Botanical Club 97(6): 353-361. https://doi.org/10.2307/2483855 https://www.wikidata.org/wiki/Q139077667
 - 1971. Carlquist, S. Wood Anatomy of Macaronesian and other Brassicaceae. Aliso 7(3): 365-384. https://doi.org/10.5642/aliso.19710703.09 https://www.wikidata.org/wiki/Q139077263
 - 1972. Carlquist, S. Island Biology: We've Only Just Begun. BioScience 22: 221-225. https://doi.org/10.2307/1296389 https://www.wikidata.org/wiki/Q139107733
 - 1972. Carlquist, S. Plant Anatomy's 300th Anniversary. Research trends in Plant Anatomy; K. A. Chowdhury Commemoration Volume: 1-6. https://www.wikidata.org/wiki/Q139381857
-- 1974. Carlquist, S. Island Biology. : 660. https://www.wikidata.org/wiki/Q138774546
-- 1975. Carlquist, S. Ecological Strategies of Xylem Evolution. . https://www.wikidata.org/wiki/Q138774547
+- 1974. Carlquist, S. Island Biology. https://www.wikidata.org/wiki/Q138774546
+- 1975. Carlquist, S. Ecological Strategies of Xylem Evolution. https://www.wikidata.org/wiki/Q138774547
 - 1975. Carlquist, S. Wood Anatomy of Onagraceae, with Notes on Alternative Modes of Photosynthate Movement in Dicotyledon Woods. Annals of the Missouri Botanical Garden 62(2): 386-424. https://doi.org/10.2307/2395205 https://www.wikidata.org/wiki/Q139077015
 - 1975. Carlquist, S. Wood Anatomy and Relationships of Geissolomataceae. Bulletin of the Torrey Botanical Club 102(3): 128-134. https://doi.org/10.2307/2484734 https://www.wikidata.org/wiki/Q139077668
 - 1976. Carlquist, S. Alexgeorgea, A Bizarre New Genus of Restionaceae from Western Australia. Australian Journal of Botany 24: 281-295. https://doi.org/10.1071/bt9760281 https://www.wikidata.org/wiki/Q55756150
 - 1976. Carlquist, S. New Species Of Stylidium, and Notes on Stylidiaceae from Southwestern Australia. Aliso 8(4): 447-463. https://doi.org/10.5642/aliso.19760804.09 https://www.wikidata.org/wiki/Q126008694
-- 1976. Carlquist, S. Tribal Interrelationships and Phylogeny of the Asteraceae. Aliso 8(4): 465-492. https://doi.org/10.5642/aliso.19760804.10 https://www.wikidata.org/wiki/Q125561985
 - 1976. Carlquist, S. Wood Anatomy of Roridulaceae: Ecological and Phylogenetic Implications. American Journal of Botany 63: 1003-1008. https://doi.org/10.1002/j.1537-2197.1976.tb13182.x https://www.wikidata.org/wiki/Q125801226
+- 1976. Carlquist, S. Tribal Interrelationships and Phylogeny of the Asteraceae. Aliso 8(4): 465-492. https://doi.org/10.5642/aliso.19760804.10 https://www.wikidata.org/wiki/Q125561985
 - 1976. Carlquist, S. Wood Anatomy of Myrothamnus flabellifolia (Myrothamnaceae) and the Problem of Multiperforate Perforation Plates. Journal of the Arnold Arboretum 57(1): 119-126. https://doi.org/10.5962/p.185861 https://www.wikidata.org/wiki/Q100560064
 - 1976. Carlquist, S. Wood Anatomy of Byblidaceae. Botanical Gazette 137(1): 35-38. https://doi.org/10.1086/336838 https://www.wikidata.org/wiki/Q139107734
 - 1976. Carlquist, S.; Bissing, Donald R. Leaf Anatomy of Hawaiian geraniums in Relation to Ecology and Taxonomy. Biotropica 8(4): 248-259. https://doi.org/10.2307/2989717 https://www.wikidata.org/wiki/Q139119297
@@ -116,7 +117,7 @@ This list is only the publications component of the network. Data are embedded f
 - 1978. Carlquist, S. Vegetative Anatomy and Systematics of Grubbiaceae. Botaniska Notiser 131: 117-136. https://www.wikidata.org/wiki/Q139106796
 - 1978. Carlquist, S. Wood Anatomy of Bruniaceae: Correlations with Ecology, Phylogeny, Organography. Aliso 9(2): 323-364. https://doi.org/10.5642/aliso.19780902.10 https://www.wikidata.org/wiki/Q139077264
 - 1978. Carlquist, S. Wood Anatomy and Relationships of Bataceae, Gyrostemonaceae, and Stylobasiaceae. Allertonia 1(5): 297-330. https://www.jstor.org/stable/10.2307/23185865 https://www.wikidata.org/wiki/Q91587658
-- 1979. Carlquist, S. Stylidium in Arnherm Land: New Species, Modes of Speciation on the Sandstone Plateau, and Comments on Floral Mimicry. Aliso 9(3): 411-461. https://doi.org/10.5642/aliso.19790903.03 https://www.wikidata.org/wiki/Q96016370
+- 1979. Carlquist, S. Stylidium in Arnhem Land: New Species, Modes of Speciation on the Sandstone Plateau, and Comments on Floral Mimicry. Aliso 9(3): 411-461. https://doi.org/10.5642/aliso.19790903.03 https://www.wikidata.org/wiki/Q96016370
 - 1980. Carlquist, S. Further Concepts in Ecological Wood Anatomy, With Comments on Recent Work in Wood Anatomy and Evolution. Aliso 9(4): 499-553. https://doi.org/10.5642/aliso.19800904.02 https://www.wikidata.org/wiki/Q139077265
 - 1980. Carlquist, S. Anatomy and Systematics of Balanopaceae. Allertonia 2(3): 191-246. https://www.jstor.org/stable/10.2307/23186109 https://www.wikidata.org/wiki/Q91587793
 - 1981. Carlquist, S. Studies in Stylidiaceae: Monocotyly in the Family; Nomenclatural Change. Aliso 10(1): 35-38. https://doi.org/10.5642/aliso.19811001.04 https://www.wikidata.org/wiki/Q96016372
@@ -130,7 +131,7 @@ This list is only the publications component of the network. Data are embedded f
 - 1982. Carlquist, S. Exospermum stipitatum (Winteraceae): Observations on Wood, Leaves, Flowers, Pollen, and Fruit. Aliso 10(2): 277-289. https://doi.org/10.5642/aliso.19821002.07 https://www.wikidata.org/wiki/Q139077268
 - 1982. Carlquist, S. Wood Anatomy of Buxaceae: Correlations with Ecology and Phylogeny. Flora 172: 463-491. https://doi.org/10.1016/s0367-2530(17)31357-9 https://www.wikidata.org/wiki/Q139107739
 - 1982. Carlquist, S.; Eckhart, Vincent M. Wood Anatomy of Darwiniothamnus, Lecocarpus, and Macraea (Asteraceae). Aliso 10(2): 291-300. https://doi.org/10.5642/aliso.19821002.08 https://www.wikidata.org/wiki/Q139119299
-- 1982. Carlquist, S. Wood Anatomy of Dipsacaceae. Taxon 34: 443-450. https://doi.org/10.2307/1220672 https://www.wikidata.org/wiki/Q28955298
+- 1982. Carlquist, S. Wood Anatomy of Dipsacaceae. Taxon 31: 443-450. https://doi.org/10.2307/1220672 https://www.wikidata.org/wiki/Q28955298
 - 1982. Carlquist, S. Wood Anatomy of Illicium (Illiciaceae): Phylogenetic, Ecological, and Functional Interpretations. American Journal of Botany 69: 1587-1598. https://doi.org/10.1002/j.1537-2197.1982.tb13412.x https://www.wikidata.org/wiki/Q139077135
 - 1982. Carlquist, S. Wood and Bark Anatomy of Scalesia (Asteraceae). Aliso 10(2): 301-312. https://doi.org/10.5642/aliso.19821002.09 https://www.wikidata.org/wiki/Q139077269
 - 1982. Carlquist, S. The Use of Ethylenediamine in Softening Hard Plant Structures for Paraffin Sectioning. Stain Technology 57: 311-317. https://doi.org/10.3109/10520298209066729 https://www.wikidata.org/wiki/Q70618524
@@ -171,6 +172,7 @@ This list is only the publications component of the network. Data are embedded f
 - 1986. Carlquist, S.; Hoekman, David A. Wood Anatomy of Gesneriaceae. Aliso 11(3): 279-297. https://doi.org/10.5642/aliso.19861103.03 https://www.wikidata.org/wiki/Q139119307
 - 1986. Carlquist, S.; Hoekman, David A. Wood Anatomy of Myoporaceae: Ecological and Systematic Considerations. Aliso 11(3): 317-334. https://doi.org/10.5642/aliso.19861103.05 https://www.wikidata.org/wiki/Q139119308
 - 1986. Carlquist, S. Wood Anatomy of Stilbaceae and Retziaceae: Ecological and Systematic Implications. Aliso 11(3): 299-316. https://doi.org/10.5642/aliso.19861103.04 https://www.wikidata.org/wiki/Q139077283
+- 1986. Carlquist, S. Terminology of Imperforate Tracheary Elements: A Reply. IAWA Bulletin 7(2): 168-170. https://doi.org/10.1163/22941932-90000982 https://www.wikidata.org/wiki/Q141485296
 - 1987. Carlquist, S. Diagonal and Tangential Vessel Aggregations in Wood: Function and Relationship to Vasecentric Tracheids. Aliso 11(4): 451-462. https://doi.org/10.5642/aliso.19871104.04 https://www.wikidata.org/wiki/Q139077346
 - 1987. Carlquist, S. Pliocene Nothofagus Wood from the Transantarctic Mountains. Aliso 11(4): 571-583. https://doi.org/10.5642/aliso.19871104.12 https://www.wikidata.org/wiki/Q139077348
 - 1987. Carlquist, S. Presence of Vessels in Wood of Sarcandra (Chloranthaceae); Comments on Vessel Origins in Angiosperms. American Journal of Botany 74: 1765-1771. https://doi.org/10.1002/j.1537-2197.1987.tb08779.x https://www.wikidata.org/wiki/Q139077138
@@ -179,7 +181,6 @@ This list is only the publications component of the network. Data are embedded f
 - 1987. Carlquist, S. Wood Anatomy of Nolanaceae. Aliso 11(4): 463-471. https://doi.org/10.5642/aliso.19871104.05 https://www.wikidata.org/wiki/Q139077350
 - 1987. Carlquist, S. Wood Anatomy of Placothira (Loasaceae). Aliso 11(4): 563-569. https://doi.org/10.5642/aliso.19871104.11 https://www.wikidata.org/wiki/Q139077351
 - 1987. Carlquist, S. Wood Anatomy of Noteworthy Species of Ludwigia (Onagraceae) with Relation to Ecology and Systematics. Annals of the Missouri Botanical Garden 74(4): 889-896. https://doi.org/10.2307/2399455 https://www.wikidata.org/wiki/Q56191067
-- 1988. Carlquist, S. Comparative Wood Anatomy. . https://www.wikidata.org/wiki/Q138774548
 - 1988. Carlquist, S. Near-Vessellessness in Ephedra and its Significance. American Journal of Botany 75: 598-601. https://doi.org/10.1002/j.1537-2197.1988.tb13480.x https://www.wikidata.org/wiki/Q139077139
 - 1988. Carlquist, S. Tracheid Dimorphism: A New Pathway in Evolution of Imperforate Tracheary Elements. Aliso 12(1): 103-118. https://doi.org/10.5642/aliso.19881201.12 https://www.wikidata.org/wiki/Q139077352
 - 1988. Carlquist, S. Wood Anatomy and Relationships of Duckeodendraceae and Goetzeaceae. IAWA Bulletin 9: 3-12. https://doi.org/10.1163/22941932-90000460 https://www.wikidata.org/wiki/Q139106802
@@ -188,6 +189,7 @@ This list is only the publications component of the network. Data are embedded f
 - 1988. Carlquist, S. Wood Anatomy of Drimys S.S. (Winteraceae). Aliso 12(1): 81-95. https://doi.org/10.5642/aliso.19881201.10 https://www.wikidata.org/wiki/Q139077354
 - 1988. Carlquist, S.; Zona, Scott. Wood Anatomy of Papaveraceae, with Comments on Vessel Restriction Patterns. IAWA Bulletin 9: 253-267. https://doi.org/10.1163/22941932-90001073 https://www.wikidata.org/wiki/Q139119311
 - 1988. Carlquist, S. Wood Anatomy of Scytopetalaceae. Aliso 12(1): 63-76. https://doi.org/10.5642/aliso.19881201.08 https://www.wikidata.org/wiki/Q139077355
+- 1988. Carlquist, S. Comparative Wood Anatomy. https://www.wikidata.org/wiki/Q138774548
 - 1988. Berry, Paul E.; Stein, Bruce A.; Carlquist, S.; Nowicke, Joan. Fuchsia pachyrrhiza (Onagraceae), A Tuberous New Species and Section of Fuchsia from Western Peru. Systematic Botany 13(4): 483-492. https://doi.org/10.2307/2419193 https://www.wikidata.org/wiki/Q55765472
 - 1989. Carlquist, S. Adaptive Wood Anatomy of Chaparral Shrubs. Natural History Museum of Los Angeles County Science Series 34: 25-35. https://www.wikidata.org/wiki/Q139106803
 - 1989. Carlquist, S. Balanopaceae. Flora of Australia. Vol. 3. Hamamelidales to Casuarinales: 93-95. https://www.wikidata.org/wiki/Q139381859
@@ -211,10 +213,10 @@ This list is only the publications component of the network. Data are embedded f
 - 1992. Carlquist, S.; Lowrie, Allen. Eight New Taxa of Drosera from Australia. Phytologia 73: 98-116. https://www.wikidata.org/wiki/Q139119315
 - 1992. MacLachlan, Andrew A.; Carlquist, S. Nonglandular Trichomes of Californian and Hawaiian Tarweeds. Aliso 13(3): 487-498. https://doi.org/10.5642/aliso.19921303.08 https://www.wikidata.org/wiki/Q139119317
 - 1992. Carlquist, S. Pit Membrane Remnants in Perforation Plates of Primitive Dicotyledons and Their Significance. American Journal of Botany 79: 660-672. https://doi.org/10.1002/j.1537-2197.1992.tb14608.x https://www.wikidata.org/wiki/Q139077141
+- 1992. Carlquist, S. Wood, Bark, and Pith Anatomy of Old World Species of Ephedra and Summary for the Genus. Aliso 13(2): 255-295. https://doi.org/10.5642/aliso.19921302.02 https://www.wikidata.org/wiki/Q139077364
 - 1992. Carlquist, S. Wood Anatomy and Stem of Chloranthus; Summary of Wood Anatomy of Chloranthaceae, With Comments on Relationships, Vessellessness, and the Origin of Monocotyledons. IAWA Bulletin 13: 3-36. https://doi.org/10.1163/22941932-90000556 https://www.wikidata.org/wiki/Q139106804
 - 1992. Carlquist, S. Wood Anatomy of Hedyosmum (Chloranthaceae) and the Tracheid-Vessel Element Transition. Aliso 13(3): 447-462. https://doi.org/10.5642/aliso.19921303.04 https://www.wikidata.org/wiki/Q139077365
 - 1992. Carlquist, S. Wood Anatomy of Lamiaceae. A Survey, with Comments on Vascular and Vasicentric Tracheids. Aliso 13(2): 309-338. https://doi.org/10.5642/aliso.19921302.04 https://www.wikidata.org/wiki/Q139077367
-- 1992. Carlquist, S. Wood, Bark, and Pith Anatomy of Old World Species of Ephedra and Summary for the Genus. Aliso 13(2): 255-295. https://doi.org/10.5642/aliso.19921302.02 https://www.wikidata.org/wiki/Q139077364
 - 1992. Carlquist, S. Wood Anatomy of Sympetalous Dicotyledon Families: A Summary, with Comments on Systematic Relationships and Evolution of the Woody Habit. Annals of the Missouri Botanical Garden 79(2): 303-332. https://doi.org/10.2307/2399771 https://www.wikidata.org/wiki/Q139077016
 - 1992. Carlquist, S. Vegetative Anatomy and Relationships of Eupomatiaceae. Bulletin of the Torrey Botanical Club 119(2): 167-180. https://doi.org/10.2307/2997029 https://www.wikidata.org/wiki/Q139077670
 - 1992. Carlquist, S. Wood Anatomy of Solanaceae: A Survey. Allertonia 6(4): 279-326. https://www.jstor.org/stable/10.2307/23186092 https://www.wikidata.org/wiki/Q91587749
@@ -227,7 +229,6 @@ This list is only the publications component of the network. Data are embedded f
 - 1995. Carlquist, S. Comparative Wood Anatomy: New Directions and Opportunities. The cambium and its products. Handbuch der Pflanzenanatomie Spezieller Teil IX(4): 173-185. https://www.wikidata.org/wiki/Q139381864
 - 1995. Carlquist, S. Introduction. Hawaiian biogeography: evolution on a hot-spot archipelago: 1-13. https://www.wikidata.org/wiki/Q139381865
 - 1995. Carlquist, S.; Gowans, David A. Secondary Growth and Wood Histology of Welwitschia. Botanical Journal of the Linnean Society 118: 107-121. https://doi.org/10.1111/j.1095-8339.1995.tb00464.x https://www.wikidata.org/wiki/Q110444062
-- 1995. Schneider, Edward L.; Carlquist, S. Vernon Irvine Cheadle 1910-1995. Madroño 42: 520-521. https://www.wikidata.org/wiki/Q93957716
 - 1995. Schneider, Edward L.; Carlquist, S. Vessel Origins in Nymphaeaceae: Euryale and Victoria. Botanical Journal of the Linnean Society 119: 185-193. https://doi.org/10.1111/j.1095-8339.1995.tb00734.x https://www.wikidata.org/wiki/Q139119320
 - 1995. Schneider, Edward L.; Carlquist, S. Vessels in the Roots of Barclaya rotundifolia (Nymphaeaceae). American Journal of Botany 82: 1343-1349. https://doi.org/10.1002/j.1537-2197.1995.tb12670.x https://www.wikidata.org/wiki/Q139119322
 - 1995. Carlquist, S. Wood Anatomy of Berberidaceae: Ecological and Phylogenetic Considerations. Aliso 14(2): 85-103. https://doi.org/10.5642/aliso.19951402.03 https://www.wikidata.org/wiki/Q139077368
@@ -243,11 +244,11 @@ This list is only the publications component of the network. Data are embedded f
 - 1996. Schneider, Edward L.; Carlquist, S. Vessel Origin in Cabomba. Nordic Journal of Botany 16: 637-642. https://doi.org/10.1111/j.1756-1051.1996.tb00281.x https://www.wikidata.org/wiki/Q139119325
 - 1996. Schneider, Edward L.; Carlquist, S. Vessels in Brasenia (Cabombaceae): New Perspectives on Vessel Origin in Primary Xylem of Angiosperms. American Journal of Botany 83: 1236-1240. https://doi.org/10.1002/j.1537-2197.1996.tb13904.x https://www.wikidata.org/wiki/Q139119326
 - 1996. Schneider, Edward L.; Carlquist, S. Vessels in Nelumbo (Nelumbonaceae). American Journal of Botany 83: 1101-1106. https://doi.org/10.1002/j.1537-2197.1996.tb13889.x https://www.wikidata.org/wiki/Q139119327
-- 1996. Carlquist, S. Wood Anatomy of Buddlejaceae. Aliso 15(1): 41-56. https://doi.org/10.5642/aliso.19961501.05 https://www.wikidata.org/wiki/Q139077375
+- 1996. Carlquist, S. Wood, Bark and Stem Anatomy of New World Species of Gnetum. Botanical Journal of the Linnean Society 120: 1-19. https://doi.org/10.1111/j.1095-8339.1996.tb00476.x https://www.wikidata.org/wiki/Q139077461
 - 1996. Carlquist, S. Wood Anatomy of Primitive Angiosperms: New Perspectives and Syntheses. Flowering Plant Origin, Evolution & Phylogeny: 68-90. https://doi.org/10.1007/978-0-585-23095-5_4 https://www.wikidata.org/wiki/Q139381868
 - 1996. Carlquist, S. Wood and Bark Anatomy of Lianoid Indomalesian and Asiatic Species of Gnetum. Botanical Journal of the Linnean Society 121: 1-24. https://doi.org/10.1111/j.1095-8339.1996.tb00742.x https://www.wikidata.org/wiki/Q139077463
 - 1996. Carlquist, S. Wood and Stem Anatomy of Menispermaceae. Aliso 14(3): 155-170. https://doi.org/10.5642/aliso.19951403.29 https://www.wikidata.org/wiki/Q139077371
-- 1996. Carlquist, S. Wood, Bark and Stem Anatomy of New World Species of Gnetum. Botanical Journal of the Linnean Society 120: 1-19. https://doi.org/10.1111/j.1095-8339.1996.tb00476.x https://www.wikidata.org/wiki/Q139077461
+- 1996. Carlquist, S. Wood Anatomy of Buddlejaceae. Aliso 15(1): 41-56. https://doi.org/10.5642/aliso.19961501.05 https://www.wikidata.org/wiki/Q139077375
 - 1996. Carlquist, S.; Boggs, Colby J. Wood Anatomy of Plumbaginaceae. Bulletin of the Torrey Botanical Club 123(2): 135-147. https://doi.org/10.2307/2996071 https://www.wikidata.org/wiki/Q139119328
 - 1996. Carlquist, S. Wood Anatomy of Akaniaceae and Bretschneideraceae: A Case of Near-Identity and its Systematic Implications. Systematic Botany 21(4): 607-616. https://doi.org/10.2307/2419618 https://www.wikidata.org/wiki/Q95458952
 - 1996. Carlquist, S. Wood, Bark, and Stem Anatomy of Gnetales: A Summary. International Journal of Plant Sciences 157(6): S58-S76. https://doi.org/10.1086/297404 https://www.wikidata.org/wiki/Q139107740
@@ -264,38 +265,38 @@ This list is only the publications component of the network. Data are embedded f
 - 1997. Carlquist, S.; Schneider, Edward L. SEM Studies on Vessels in Ferns. 4. Astrolepis. American Fern Journal 87(2): 43-50. https://doi.org/10.2307/1547535 https://www.wikidata.org/wiki/Q56189932
 - 1997. Carlquist, S.; Schneider, Edward L. SEM Studies on Vessels in Ferns. 2. Pteridium. American Journal of Botany 84: 581-587. https://doi.org/10.2307/2445893 https://www.wikidata.org/wiki/Q46232434
 - 1997. Schneider, Edward L.; Carlquist, S. SEM Studies on Vessels in Ferns. 3. Phlebodium and Polystichum. International Journal of Plant Sciences 158(3): 343-349. https://doi.org/10.1086/297446 https://www.wikidata.org/wiki/Q139119332
-- 1998. Carlquist, S.; Schneider, Edward L. Origins and Nature of Vessels in Monocotyledons 5. Araceae Subfamily Colocasioideae. Botanical Journal of the Linnean Society 128: 71-96. https://doi.org/10.1006/bojl.1998.0181 https://www.wikidata.org/wiki/Q125687424
 - 1998. Carlquist, S.; Schneider, Edward L. Origins and Nature of Vessels in Monocotyledons. 3. Lowiaceae, with Comments on Rhizome Anatomy. Blumea 43: 219-224. https://www.wikidata.org/wiki/Q96030422
+- 1998. Carlquist, S.; Schneider, Edward L. Origins and Nature of Vessels in Monocotyledons 5. Araceae Subfamily Colocasioideae. Botanical Journal of the Linnean Society 128: 71-96. https://doi.org/10.1006/bojl.1998.0181 https://www.wikidata.org/wiki/Q125687424
 - 1998. Carlquist, S.; Schneider, Edward L. SEM Studies on Vessels in Ferns. 7. Microgramma nitida. Anales del Instituto de Biología, Universidad Nacional Autónoma de México. Serie botánica 69: 1-7. https://www.wikidata.org/wiki/Q139119336
 - 1998. Schneider, Edward L.; Carlquist, S. SEM Studies on Vessels of Ferns. 9. Dicranopteris (Gleicheniaceae) and Vessel Patterns in Leptosporangiate Ferns. American Journal of Botany 85: 1028-1932. https://doi.org/10.2307/2446370 https://www.wikidata.org/wiki/Q84389934
 - 1998. Carlquist, S.; DeVore, Melanie L. Wood Anatomy of Calyceraceae with Reference to Ecology, Habit,and Systematic Relationships. Aliso 17(1): 63-76. https://doi.org/10.5642/aliso.19981701.06 https://www.wikidata.org/wiki/Q139119338
-- 1998. Carlquist, S. Wood Anatomy of Dubautia (Asteraceae: Madiinae) in Relation to Adaptive Radiation. Pacific Science 52: 356-368. https://www.wikidata.org/wiki/Q100381202
 - 1998. Carlquist, S. Wood and Bark Anatomy of Caricaceae; Correlations with Systematics and Habit. IAWA Journal 19: 191-206. https://doi.org/10.1163/22941932-90001522 https://www.wikidata.org/wiki/Q139077538
+- 1998. Carlquist, S. Wood Anatomy of Dubautia (Asteraceae: Madiinae) in Relation to Adaptive Radiation. Pacific Science 52: 356-368. https://www.wikidata.org/wiki/Q100381202
 - 1998. Carlquist, S. Wood and Stem Anatomy of Petiveria and Rivina (Caryophyllales); Systematic Implications. IAWA Journal 19: 383-391. https://doi.org/10.1163/22941932-90000659 https://www.wikidata.org/wiki/Q139077539
 - 1998. Schneider, Edward L.; Carlquist, S. SEM Studies on Vessels in Ferns. 5. Woodsia scopulina. American Fern Journal 88(1): 17-23. https://doi.org/10.2307/1547310 https://www.wikidata.org/wiki/Q139119334
 - 1998. Carlquist, S.; Schneider, Edward L. SEM Studies on Vessels in Ferns. 6. Woodsia ilvensis, With Comments on Vessel Origin in Ferns. Flora 193: 179-185. https://doi.org/10.1016/s0367-2530(17)30836-8 https://www.wikidata.org/wiki/Q139119335
 - 1998. Carlquist, S.; Schneider, Edward L. SEM Studies on Vessels in Ferns. 10. Selected Osmundaceae and Schizaeaceae. International Journal of Plant Sciences 159(5): 788-797. https://doi.org/10.1086/297598 https://www.wikidata.org/wiki/Q139119337
 - 1998. Schneider, Edward L.; Carlquist, S. Origin and Nature of Vessels in Monocotyledons. 4. Araceae Subfamily Philodendroideae. Journal of the Torrey Botanical Society 125(4): 253-260. https://doi.org/10.2307/2997239 https://www.wikidata.org/wiki/Q139119333
 - 1998. Carlquist, S. Wood Anatomy of Wilkesia (Asteraceae) with Relation to Systematics, Organography, and Habit. Journal of the Torrey Botanical Society 125(4): 261-267. https://doi.org/10.2307/2997240 https://www.wikidata.org/wiki/Q139077693
+- 1999. Carlquist, S.; Schneider, Edward L.; Kenneally, Kevin F. SEM Studies on Vessels in Ferns. 8. Platyzoma. Australian Journal of Botany 47: 277-282. https://doi.org/10.1071/bt97120 https://www.wikidata.org/wiki/Q100711189
 - 1999. Schneider, Edward L.; Carlquist, S. SEM Studies on Vessels in Ferns. 11. Ophioglossum. Botanical Journal of the Linnean Society 129: 105-114. https://doi.org/10.1111/j.1095-8339.1999.tb00494.x https://www.wikidata.org/wiki/Q139119340
 - 1999. Carlquist, S.; Schneider, Edward L. SEM Studies on Vessels in Ferns. 12. Marattiaceae, With Comments on Vessel Patterns in Eusporangiate Ferns. American Journal of Botany 86: 457-464. https://doi.org/10.2307/2656805 https://www.wikidata.org/wiki/Q41646331
-- 1999. Carlquist, S.; Schneider, Edward L.; Kenneally, Kevin F. SEM Studies on Vessels in Ferns. 8. Platyzoma. Australian Journal of Botany 47: 277-282. https://doi.org/10.1071/bt97120 https://www.wikidata.org/wiki/Q100711189
 - 1999. Carlquist, S.; Miller, Regis B. Vegetative Anatomy and Relationships of Setchellanthus caeruleus (Setchellanthaceae). Taxon 48: 289-302. https://doi.org/10.2307/1224434 https://www.wikidata.org/wiki/Q28958716
-- 1999. Carlquist, S. Wood Anatomy, Stem Anatomy, and Cambial Activity of Barbeuia (Caryophyllales). IAWA Journal 20(4): 431-440. https://doi.org/10.1163/22941932-90001569 https://www.wikidata.org/wiki/Q139077541
 - 1999. Carlquist, S. Wood anatomy of Agdestis (Caryophyllales): systematic position and nature of successive cambia. Aliso 18(1): 35-43. https://doi.org/10.5642/aliso.19991801.13 https://www.wikidata.org/wiki/Q139077380
 - 1999. Carlquist, S. Wood and Bark Anatomy of Schisandraceae: Implications for Phylogeny, Habit, and Vessel Evolution. Aliso 19(1): 45-55. https://doi.org/10.5642/aliso.19991801.14 https://www.wikidata.org/wiki/Q139077381
 - 1999. Carlquist, S. Wood and Stem Anatomy of Stegnosperma (Caryophyllales); Phylogenetic Relationships; Nature of Lateral Meristems and Successive Cambial Activity. IAWA Journal 20: 149-163. https://doi.org/10.1163/22941932-90000674 https://www.wikidata.org/wiki/Q139077540
+- 1999. Carlquist, S. Wood Anatomy, Stem Anatomy, and Cambial Activity of Barbeuia (Caryophyllales). IAWA Journal 20(4): 431-440. https://doi.org/10.1163/22941932-90001569 https://www.wikidata.org/wiki/Q139077541
 - 1999. Carlquist, S. Wood, Stem, and Root Anatomy of Basellaceae with Relation to Habit, Systematics, and Cambial Variants. Flora 194: 1-12. https://doi.org/10.1016/s0367-2530(17)30874-5 https://www.wikidata.org/wiki/Q139107741
 - 1999. Schneider, Edward L.; Carlquist, S. SEM Studies on Vessels in Ferns. 13. Nephrolepis. American Fern Journal 89(2): 171-177. https://doi.org/10.2307/1547351 https://www.wikidata.org/wiki/Q56189865
 - 1999. Tobe, Hiroshi; Carlquist, S.; Iltis, Hugh. Reproductive Anatomy and Relationships of Setchellanthus caeruleus (Setchellanthaceae). Taxon 48(2): 277-283. https://doi.org/10.2307/1224432 https://www.wikidata.org/wiki/Q28958714
 - 1999. Schneider, Edward L.; Carlquist, S. SEM Studies on Vessels in Ferns. XV. Selected Rosette Epiphytes (Aspleniaceae, Elaphoglossaceae, Vittariaceae). International Journal of Plant Sciences 160(5): 1013-1020. https://doi.org/10.1086/314184 https://www.wikidata.org/wiki/Q73041961
+- 2000. Carlquist, S.; Schneider, Edward L. SEM studies of vessels in ferns: 14. Ceratopteris. Aquatic Botany 66: 1-8. https://doi.org/10.1016/s0304-3770(99)00023-6 https://www.wikidata.org/wiki/Q139119343
 - 2000. Carlquist, S.; Schneider, Edward L. SEM Studies on Vessels in Ferns. 16. Pacific Tree Ferns (Blechnaceae, Cyatheaceae, Dicksoniaceae). Pacific Science 54: 75-86. http://hdl.handle.net/10125/1602 https://www.wikidata.org/wiki/Q100381293
 - 2000. Schneider, Edward L.; Carlquist, S. SEM Studies on Vessels in Ferns. 17. Psilotaceae. American Journal of Botany 87: 76-181. https://doi.org/10.2307/2656903 https://www.wikidata.org/wiki/Q41719480
 - 2000. Carlquist, S.; Schneider, Edward L. SEM Studies on Vessels in Ferns. 18. Montane Cheilanthoid Ferns (Pteridaceae) of North America. Aliso 19(1): 31-39. https://doi.org/10.5642/aliso.20001901.04 https://www.wikidata.org/wiki/Q139119344
 - 2000. Carlquist, S.; Schneider, Edward L.; Lamoureux, Charles H. SEM Studies on Vessels in Ferns. 20. Hawaiian hymenophyllaceae. Pacific Science 54: 365-375. https://www.wikidata.org/wiki/Q100381734
-- 2000. Carlquist, S.; Schneider, Edward L. SEM studies of vessels in ferns: 14. Ceratopteris. Aquatic Botany 66: 1-8. https://doi.org/10.1016/s0304-3770(99)00023-6 https://www.wikidata.org/wiki/Q139119343
-- 2000. Carlquist, S. Wood Anatomy of Fouquieriaceae in Relation to Habit, Ecology, and Systematics; Nature of Meristems in Wood and Bark. Aliso 19(2): 137-163. https://doi.org/10.5642/aliso.20001902.03 https://www.wikidata.org/wiki/Q139077383
 - 2000. Carlquist, S. Wood and Stem Anatomy of Phytolaccoid and Rivinoid Phytolaccaceae (Caryophyllales): Ecology, Systematics, Nature of Successive Cambia. Aliso 19(1): 13-29. https://doi.org/10.5642/aliso.20001901.03 https://www.wikidata.org/wiki/Q139077382
+- 2000. Carlquist, S. Wood Anatomy of Fouquieriaceae in Relation to Habit, Ecology, and Systematics; Nature of Meristems in Wood and Bark. Aliso 19(2): 137-163. https://doi.org/10.5642/aliso.20001902.03 https://www.wikidata.org/wiki/Q139077383
 - 2000. Schneider, Edward L.; Carlquist, S. SEM Studies on Vessels in Ferns. 19. Marsilea. American Fern Journal 90(1): 32-41. https://doi.org/10.2307/1547260 https://www.wikidata.org/wiki/Q56189830
 - 2000. Carlquist, S. Wood and Stem Anatomy of Sarcobatus (Caryophyllales): Systematic and Ecological Implications. Taxon 49: 27-34. https://doi.org/10.2307/1223929 https://www.wikidata.org/wiki/Q28958853
 - 2000. Carlquist, S. Wood and Bark Anatomy of Takhtajania (Winteraceae); Phylogenetic and Ecological Implications. Annals of the Missouri Botanical Garden 87(3): 317-322. https://doi.org/10.2307/2666191 https://www.wikidata.org/wiki/Q56191420
@@ -306,18 +307,19 @@ This list is only the publications component of the network. Data are embedded f
 - 2001. Carlquist, S. Observations on the Vegetative Anatomy of Austrobaileya: Habital, Organographic and Phylogenetic Conclusions. Botanical Journal of the Linnean Society 135(1): 1-11. https://doi.org/10.1006/bojl.2000.0417 https://www.wikidata.org/wiki/Q139077464
 - 2001. Carlquist, S.; Schneider, Edward L. SEM Studies of Vessels of Saururaceae. IAWA Journal 22: 183-192. https://www.wikidata.org/wiki/Q139119346
 - 2001. Olson, Mark E.; Carlquist, S. Stem and Root Anatomical Correlations With Life Form Diversity, Ecology, and Systematics in Moringa (Moringaceae). Botanical Journal of the Linnean Society 135: 315-348. https://doi.org/10.1111/j.1095-8339.2001.tb00786.x https://www.wikidata.org/wiki/Q56610387
-- 2001. Carlquist, S.; Schneider, Edward L. Vegetative Anatomy of the New Caledonian Endemic Amborella Trichopoda: New Data: Relationships with the Illiciales and Implications for Vessel Origin and Definition. Pacific Science 55: 305-312. https://doi.org/10.1353/psc.2001.0020 https://www.wikidata.org/wiki/Q139119348
+- 2001. Carlquist, S.; Schneider, Edward L. Vegetative Anatomy of the New Caledonian Endemic Amborella Trichopoda: New Data: Relationships with the Illiciales and Implications for Vessel Origin and Definition. Pacific Science 55(3): 305-312. https://doi.org/10.1353/psc.2001.0020 https://www.wikidata.org/wiki/Q56211461
 - 2001. Carlquist, S.; Miller, Regis B. Wood Anatomy of Corynocarpaceae is Consistent with Cucurbitalean Placement. Systematic Botany 26(1): 54-65. https://www.jstor.org/stable/10.2307/2666654 https://www.wikidata.org/wiki/Q95467367
 - 2001. Carlquist, S. Wood Anatomy of the Endemic Woody Asteraceae of St Helena I: Phyletic and Ecological Aspects. Botanical Journal of the Linnean Society 137(2): 197-210. https://doi.org/10.1006/bojl.2001.0483 https://www.wikidata.org/wiki/Q126010675
 - 2001. Carlquist, S. Wood and Stem Anatomy of Rhabdodendraceae is Consistent with Placement in Caryophyllales. IAWA Journal 22: 171-181. https://doi.org/10.1163/22941932-90000276 https://www.wikidata.org/wiki/Q139077542
+- 2001. Carlquist, S.; Schneider, Edward L. Vessels in Ferns: Structural, Ecological, and Evolutionary Significance. American Journal of Botany 88(1): 1-13. https://doi.org/10.2307/2657121 https://www.wikidata.org/wiki/Q46126499
 - 2002. Carlquist, S.; Schneider, Edward L. The Tracheid-Vessel Element Transition in Angiosperms Involves Multiple Independent Features: Cladistic Consequences. American Journal of Botany 89: 185-195. https://doi.org/10.3732/ajb.89.2.185 https://www.wikidata.org/wiki/Q33931393
 - 2002. Carlquist, S. Wood and Bark Anatomy of Myricaceae: Relationships, Generic Definitions, and Ecological Interpretations. Aliso 21(1): 7-29. https://doi.org/10.5642/aliso.20022101.03 https://www.wikidata.org/wiki/Q96016455
 - 2002. Carlquist, S. Wood and Bark Anatomy of Salvadoraceae: Ecology, Relationships, Histology of Interxylary Phloem. Journal of the Torrey Botanical Society 129(1): 10-20. https://doi.org/10.2307/3088678 https://www.wikidata.org/wiki/Q139077694
 - 2002. Carlquist, S. Wood Anatomy and Successive Cambia in Simmondsia (Simmondsiaceae): Evidence for Inclusion in Caryophyllales S.L. Madroño 49(3): 158-164. https://www.jstor.org/stable/10.2307/41425461 https://www.wikidata.org/wiki/Q93958711
 - 2002. Carlquist, S.; Schneider, Edward L. Vessels of Illicium (Illiciaceae): Range of Pit Membrane Remnant Presence in Perforations and Other Vessel Details. International Journal of Plant Sciences 163(5): 755-763. https://doi.org/10.1086/342080 https://www.wikidata.org/wiki/Q139119349
-- 2003. Carlquist, S.; Baldwin, Bruce G.; Carr, Gerald D. Tarweeds and Silverswords: Evolution of the Madiinae (Asteraceae). : 294. https://www.wikidata.org/wiki/Q138774549
 - 2003. Carlquist, S.; Lowrey, Timothy K. Wood Anatomy of Hawaiian and New Guinean Species of Tetramolopium (Asteraceae): Ecological and Systematic Aspects. Pacific Science 57: 171-179. https://doi.org/10.1353/psc.2003.0012 https://www.wikidata.org/wiki/Q100375732
 - 2003. Carlquist, S. Wood and Stem Anatomy of Woody Amaranthaceae S.S.: Ecology, Systematics, and the Problem of Defining Rays in Dicotyledons. Botanical Journal of the Linnean Society 143: 1-19. https://doi.org/10.1046/j.1095-8339.2003.00197.x https://www.wikidata.org/wiki/Q139077466
+- 2003. Carlquist, S.; Baldwin, Bruce G.; Carr, Gerald D. Tarweeds and Silverswords: Evolution of the Madiinae (Asteraceae). https://www.wikidata.org/wiki/Q138774549
 - 2003. Carlquist, S. Wood anatomy of Polygonaceae: analysis of a family with exceptional wood diversity. Botanical Journal of the Linnean Society 141: 25-51. https://doi.org/10.1046/j.1095-8339.2003.00100.x https://www.wikidata.org/wiki/Q139077465
 - 2003. Carlquist, S. Wood Anatomy of Aextoxicaceae and Berberidopsidaceae is Compatible with their Inclusion in Berberidopsidales. Systematic Botany 28(2): 317-325. https://www.jstor.org/stable/10.2307/3094000 https://www.wikidata.org/wiki/Q95467260
 - 2003. Schneider, Edward L.; Carlquist, S. Perforation Plate Diversity in Illicium floridanum (Illiciaceae) with Respect to Organs, Provenance, and Microtechnical Methods. Sida 20(3): 1047-1057. https://www.jstor.org/stable/10.2307/41968146 https://www.wikidata.org/wiki/Q91202346
@@ -370,6 +372,7 @@ This list is only the publications component of the network. Data are embedded f
 - 2015. Carlquist, S. Living Cells in Wood. 2. Raylessness: Histology and Evolutionary Significance. Botanical Journal of the Linnean Society 178: 529-555. https://doi.org/10.1111/boj.12291 https://www.wikidata.org/wiki/Q112801712
 - 2016. Carlquist, S. Wood Anatomy of Brassicales: New Information, New Evolutionary Concepts. The Botanical Review 82(1): 24-90. https://doi.org/10.1007/s12229-016-9161-2 https://www.wikidata.org/wiki/Q139106809
 - 2016. Carlquist, S.; Nazaire, M. SEM Studies of Two Riparian New-Caledonian Conifers Reveal Air Channels in Stem Wood; Field Observations. Aliso 34(1): 1-7. https://doi.org/10.5642/aliso.20163401.02 https://www.wikidata.org/wiki/Q139119370
+- 2017. Carlquist, S. Vestured Pits in Echium (Boraginaceae): Island Woodiness Revisited. Aliso 35(1): 28-40. https://doi.org/10.5642/aliso.20173501.03 https://www.wikidata.org/wiki/Q141485298
 - 2017. Carlquist, S.; Guilliams, C. Matt. Distinctive Wood Anatomy of the Root-Parasitic Family Lennoaceae (Boraginales). IAWA Journal 38(1): 3-12. https://doi.org/10.1163/22941932-20170153 https://www.wikidata.org/wiki/Q139119372
 - 2017. Carlquist, S. Conifer Tracheids Resolve Conflicting Structural Requirements: Data, Hypotheses, Questions. Journal of the Botanical Research Institute of Texas 11(1): 123-141. https://doi.org/10.17348/jbrit.v11.i1.1144 https://www.wikidata.org/wiki/Q99432576
 - 2017. Carlquist, S. What the Penaeaceae Alliance (Myrtales) Tells us About the Nature of Vestured Pits in Xylem. Brittonia 69(3): 276-294. https://doi.org/10.1007/s12228-017-9477-1 https://www.wikidata.org/wiki/Q139077514
